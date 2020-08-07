@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="559dp"
+        app:layout_constraintBottom_toTopOf="@+id/tes2"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <RelativeLayout
+        android:id="@+id/tes2"
+        android:layout_width="match_parent"
+        android:layout_height="290dp"
+        android:background="#1a936f"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/map"
+        app:layout_constraintVertical_bias="1.0">
+
+        <LinearLayout
+            android:id="@+id/statusLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:text="Status"
+                android:textSize="20dp"
+                android:textColor="#FFFF"/>
+
+            <Switch
+                android:id="@+id/stat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/Nama_Layout"
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:orientation="vertical"
+            android:layout_below="@id/statusLayout">
+
+            <TextView
+                android:id="@+id/tes3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nama"
+                android:textSize="25dp"
+                android:textColor="#FFFFFF"/>
+
+            <TextView
+                android:id="@+id/namaP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="15dp"
+                android:textColor="#FFFFFF"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/kontak_Layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_below="@id/Nama_Layout">
+
+            <TextView
+                android:id="@+id/tes4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Nama_Layout"
+                android:text="Kontak"
+                android:textSize="25dp"
+                android:textColor="#FFFFFF"/>
+
+            <TextView
+                android:id="@+id/kontakP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="15dp"
+                android:textColor="#FFFFFF"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/Alamat_Layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_below="@id/kontak_Layout">
+
+            <TextView
+                android:id="@+id/tes5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Alamat"
+                android:textSize="25dp"
+                android:textColor="#FFFFFF"/>
+
+            <TextView
+                android:id="@+id/alamatP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="15dp"
+                android:textColor="#FFFFFF"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/trac"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/btn_shape_capsule1"
+            android:padding="8dp"
+            android:text="Track"
+            android:textColor="@drawable/btn_txt_selector"
+            android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
